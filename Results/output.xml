@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.7.7 on win32)" generated="20200409 08:51:32.572" rpa="false">
+<robot generator="Robot 3.1.2 (Python 3.7.7 on win32)" generated="20200808 11:07:02.938" rpa="false">
 <suite id="s1" name="Tests" source="C:\Users\kstine\github\robotsatplay\Tests">
 <suite id="s1-s1" name="Test" source="C:\Users\kstine\github\robotsatplay\Tests\test.robot">
 <test id="s1-s1-t1" name="Do things">
@@ -8,14 +8,14 @@
 <arguments>
 <arg>${LISTA}</arg>
 </arguments>
-<status status="PASS" starttime="20200409 08:51:32.599" endtime="20200409 08:51:32.600"></status>
+<status status="PASS" starttime="20200808 11:07:02.963" endtime="20200808 11:07:02.963"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${LISTB}</arg>
 </arguments>
-<status status="PASS" starttime="20200409 08:51:32.600" endtime="20200409 08:51:32.601"></status>
+<status status="PASS" starttime="20200808 11:07:02.964" endtime="20200808 11:07:02.964"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -25,8 +25,8 @@
 <assign>
 <var>${lenlista}</var>
 </assign>
-<msg timestamp="20200409 08:51:32.601" level="INFO">${lenlista} = lista=3</msg>
-<status status="PASS" starttime="20200409 08:51:32.601" endtime="20200409 08:51:32.601"></status>
+<msg timestamp="20200808 11:07:02.965" level="INFO">${lenlista} = lista=3</msg>
+<status status="PASS" starttime="20200808 11:07:02.964" endtime="20200808 11:07:02.965"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -36,8 +36,8 @@
 <assign>
 <var>${lenlistb}</var>
 </assign>
-<msg timestamp="20200409 08:51:32.602" level="INFO">${lenlistb} = listb=2</msg>
-<status status="PASS" starttime="20200409 08:51:32.602" endtime="20200409 08:51:32.602"></status>
+<msg timestamp="20200808 11:07:02.965" level="INFO">${lenlistb} = listb=2</msg>
+<status status="PASS" starttime="20200808 11:07:02.965" endtime="20200808 11:07:02.965"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -47,8 +47,8 @@
 <assign>
 <var>${evalbool}</var>
 </assign>
-<msg timestamp="20200409 08:51:32.603" level="INFO">${evalbool} = False</msg>
-<status status="PASS" starttime="20200409 08:51:32.602" endtime="20200409 08:51:32.603"></status>
+<msg timestamp="20200808 11:07:02.966" level="INFO">${evalbool} = False</msg>
+<status status="PASS" starttime="20200808 11:07:02.966" endtime="20200808 11:07:02.966"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
@@ -58,8 +58,8 @@
 <assign>
 <var>${bool}</var>
 </assign>
-<msg timestamp="20200409 08:51:32.603" level="INFO">${bool} = True</msg>
-<status status="PASS" starttime="20200409 08:51:32.603" endtime="20200409 08:51:32.603"></status>
+<msg timestamp="20200808 11:07:02.966" level="INFO">${bool} = True</msg>
+<status status="PASS" starttime="20200808 11:07:02.966" endtime="20200808 11:07:02.967"></status>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
@@ -76,23 +76,23 @@
 <arguments>
 <arg>[value for value in ${LISTA} if value in ${LISTB}]</arg>
 </arguments>
-<status status="PASS" starttime="20200409 08:51:32.604" endtime="20200409 08:51:32.604"></status>
+<status status="PASS" starttime="20200808 11:07:02.967" endtime="20200808 11:07:02.967"></status>
 </kw>
-<msg timestamp="20200409 08:51:32.604" level="INFO">@{eval} = [ Rat Poison ]</msg>
-<status status="PASS" starttime="20200409 08:51:32.603" endtime="20200409 08:51:32.604"></status>
+<msg timestamp="20200808 11:07:02.967" level="INFO">@{eval} = [ Rat Poison ]</msg>
+<status status="PASS" starttime="20200808 11:07:02.967" endtime="20200808 11:07:02.967"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${lenlista} ${lenlistb} Equal=${evalbool} ${eval} ${evalbool}</arg>
 </arguments>
-<status status="PASS" starttime="20200409 08:51:32.604" endtime="20200409 08:51:32.605"></status>
+<status status="PASS" starttime="20200808 11:07:02.968" endtime="20200808 11:07:02.968"></status>
 </kw>
-<status status="PASS" starttime="20200409 08:51:32.599" endtime="20200409 08:51:32.605" critical="yes"></status>
+<status status="PASS" starttime="20200808 11:07:02.963" endtime="20200808 11:07:02.968" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20200409 08:51:32.593" endtime="20200409 08:51:32.606"></status>
+<status status="PASS" starttime="20200808 11:07:02.961" endtime="20200808 11:07:02.969"></status>
 </suite>
-<status status="PASS" starttime="20200409 08:51:32.573" endtime="20200409 08:51:32.608"></status>
+<status status="PASS" starttime="20200808 11:07:02.939" endtime="20200808 11:07:02.970"></status>
 </suite>
 <statistics>
 <total>
