@@ -1,4 +1,5 @@
 *** Settings ***
+Documentation  Test for common value between two lists
 
 *** Variables ***
 @{LISTA} =  Beer  Tofu  Rat Poison
@@ -6,6 +7,7 @@
 
 *** Test Cases ***
 Do things
+    [Tags]  things
     Log To Console  ${LISTA}
     Log To Console  ${LISTB}
     ${lenlista} =  Evaluate  "lista=" + str(len(${LISTA}))

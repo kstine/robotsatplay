@@ -142,3 +142,6 @@ Results/*
 
 # Keep Folders
 !Results/.gitkeep
+
+# Ignore files
+
