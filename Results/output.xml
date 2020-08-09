@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.7.7 on win32)" generated="20200808 11:07:02.938" rpa="false">
+<robot generator="Robot 3.1.2 (Python 3.7.7 on win32)" generated="20200808 11:09:54.439" rpa="false">
 <suite id="s1" name="Tests" source="C:\Users\kstine\github\robotsatplay\Tests">
 <suite id="s1-s1" name="Test" source="C:\Users\kstine\github\robotsatplay\Tests\test.robot">
 <test id="s1-s1-t1" name="Do things">
@@ -8,102 +8,75 @@
 <arguments>
 <arg>${LISTA}</arg>
 </arguments>
-<status status="PASS" starttime="20200808 11:07:02.963" endtime="20200808 11:07:02.963"></status>
+<status status="PASS" starttime="20200808 11:09:54.468" endtime="20200808 11:09:54.469"></status>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <doc>Logs the given message to the console.</doc>
 <arguments>
 <arg>${LISTB}</arg>
 </arguments>
-<status status="PASS" starttime="20200808 11:07:02.964" endtime="20200808 11:07:02.964"></status>
+<status status="PASS" starttime="20200808 11:09:54.469" endtime="20200808 11:09:54.470"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
-<arg>"lista=" + str(len(${LISTA}))</arg>
+<arg>"lista=" + str(len($LISTA))</arg>
 </arguments>
 <assign>
 <var>${lenlista}</var>
 </assign>
-<msg timestamp="20200808 11:07:02.965" level="INFO">${lenlista} = lista=3</msg>
-<status status="PASS" starttime="20200808 11:07:02.964" endtime="20200808 11:07:02.965"></status>
+<msg timestamp="20200808 11:09:54.473" level="INFO">${lenlista} = lista=3</msg>
+<status status="PASS" starttime="20200808 11:09:54.470" endtime="20200808 11:09:54.473"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
-<arg>"listb=" + str(len(${LISTB}))</arg>
+<arg>"listb=" + str(len($LISTB))</arg>
 </arguments>
 <assign>
 <var>${lenlistb}</var>
 </assign>
-<msg timestamp="20200808 11:07:02.965" level="INFO">${lenlistb} = listb=2</msg>
-<status status="PASS" starttime="20200808 11:07:02.965" endtime="20200808 11:07:02.965"></status>
+<msg timestamp="20200808 11:09:54.474" level="INFO">${lenlistb} = listb=2</msg>
+<status status="PASS" starttime="20200808 11:09:54.473" endtime="20200808 11:09:54.474"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
-<arg>len(${LISTA})==len(${LISTB})</arg>
+<arg>len($LISTA)==len($LISTB)</arg>
 </arguments>
 <assign>
 <var>${evalbool}</var>
 </assign>
-<msg timestamp="20200808 11:07:02.966" level="INFO">${evalbool} = False</msg>
-<status status="PASS" starttime="20200808 11:07:02.966" endtime="20200808 11:07:02.966"></status>
+<msg timestamp="20200808 11:09:54.475" level="INFO">${evalbool} = False</msg>
+<status status="PASS" starttime="20200808 11:09:54.474" endtime="20200808 11:09:54.475"></status>
 </kw>
 <kw name="Evaluate" library="BuiltIn">
 <doc>Evaluates the given expression in Python and returns the results.</doc>
 <arguments>
-<arg>any(check in ${LISTA} for check in ${LISTB})</arg>
+<arg>any(check in $LISTA for check in $LISTB)</arg>
 </arguments>
 <assign>
 <var>${bool}</var>
 </assign>
-<msg timestamp="20200808 11:07:02.966" level="INFO">${bool} = True</msg>
-<status status="PASS" starttime="20200808 11:07:02.966" endtime="20200808 11:07:02.967"></status>
+<msg timestamp="20200808 11:09:54.476" level="FAIL">Evaluating expression 'any (check in  RF_VAR_LISTA for check in  RF_VAR_LISTB )' failed: NameError: name 'RF_VAR_LISTA' is not defined</msg>
+<status status="FAIL" starttime="20200808 11:09:54.475" endtime="20200808 11:09:54.476"></status>
 </kw>
-<kw name="Run Keyword If" library="BuiltIn">
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<arguments>
-<arg>${bool}==True</arg>
-<arg>Evaluate</arg>
-<arg>[value for value in ${LISTA} if value in ${LISTB}]</arg>
-</arguments>
-<assign>
-<var>@{eval}</var>
-</assign>
-<kw name="Evaluate" library="BuiltIn">
-<doc>Evaluates the given expression in Python and returns the results.</doc>
-<arguments>
-<arg>[value for value in ${LISTA} if value in ${LISTB}]</arg>
-</arguments>
-<status status="PASS" starttime="20200808 11:07:02.967" endtime="20200808 11:07:02.967"></status>
-</kw>
-<msg timestamp="20200808 11:07:02.967" level="INFO">@{eval} = [ Rat Poison ]</msg>
-<status status="PASS" starttime="20200808 11:07:02.967" endtime="20200808 11:07:02.967"></status>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>${lenlista} ${lenlistb} Equal=${evalbool} ${eval} ${evalbool}</arg>
-</arguments>
-<status status="PASS" starttime="20200808 11:07:02.968" endtime="20200808 11:07:02.968"></status>
-</kw>
-<status status="PASS" starttime="20200808 11:07:02.963" endtime="20200808 11:07:02.968" critical="yes"></status>
+<status status="FAIL" starttime="20200808 11:09:54.468" endtime="20200808 11:09:54.476" critical="yes">Evaluating expression 'any (check in  RF_VAR_LISTA for check in  RF_VAR_LISTB )' failed: NameError: name 'RF_VAR_LISTA' is not defined</status>
 </test>
-<status status="PASS" starttime="20200808 11:07:02.961" endtime="20200808 11:07:02.969"></status>
+<status status="FAIL" starttime="20200808 11:09:54.459" endtime="20200808 11:09:54.481"></status>
 </suite>
-<status status="PASS" starttime="20200808 11:07:02.939" endtime="20200808 11:07:02.970"></status>
+<status status="FAIL" starttime="20200808 11:09:54.440" endtime="20200808 11:09:54.482"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0">Critical Tests</stat>
-<stat pass="1" fail="0">All Tests</stat>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" id="s1" name="Tests">Tests</stat>
-<stat pass="1" fail="0" id="s1-s1" name="Test">Tests.Test</stat>
+<stat pass="0" fail="1" id="s1" name="Tests">Tests</stat>
+<stat pass="0" fail="1" id="s1-s1" name="Test">Tests.Test</stat>
 </suite>
 </statistics>
 <errors>
